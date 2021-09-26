@@ -13,16 +13,8 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
-   
-   <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
-    </style>
 </head>
 <body>
-
-  
-
       <!--Main Navigation-->
   <header>
     <style>        
@@ -119,9 +111,12 @@
   </header>
   <!--Main Navigation-->
 
-  <canvas id="myCanvas" width="700" height="500"></canvas>
  
      
+
+     
+
+ 
 
     <hr class="m-0" />
 
@@ -139,33 +134,5 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/script.js"></script>
-
-    <script>
-      var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-var x = canvas.width/2;
-var y = canvas.height-30;
-var dx = 2;
-var dy = -2;
-
-function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-}
-
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
-}
-
-setInterval(draw, 10);
-
-
-    </script>
 </body>
 </html>
