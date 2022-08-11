@@ -25,3 +25,12 @@ header video {
     }
   }
   
+.rpsGame{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+.rpsGame button{
+    width: 10%;
+    height: 7%;
+    background-color: rgba(84, 124, 158, 0.192);
+}

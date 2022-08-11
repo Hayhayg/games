@@ -108,7 +108,7 @@
         <div class="container d-flex align-items-center justify-content-center text-center h-100">
           <div class="text-white">
            
-            <a class="btn btn-outline-light btn-lg m-2" href="#" role="button"
+            <a class="btn btn-outline-light btn-lg m-2" href="#rpsGame" role="button"
               rel="nofollow" >Play</a>
            
           </div>
@@ -118,8 +118,23 @@
     <!-- Background image -->
   </header>
   <!--Main Navigation-->
+  <div class="rpsGame" id="rpsGame">
+    <br>
+    <h1 style="text-align: center; color:rgba(19, 44, 156, 0.877)">Rock, Paper, Scissors</h1>
+    <br>
+    <h2>Your Choice: <span id="user-choice"></span></h2>
+    <h2 style="color:rgb(194, 43, 156)">Computer Choice: <span id="computer-choice"></span></h2>
+    <h2 style="color:rgb(43, 134, 194)">Result: <span id="result"></span></h2>
+    <div style="text-align: center">
+      <button className="button" id = "rock">rock</button>
+      <button className="button" id = "paper">paper</button>
+      <button className="button" id = "scissors">scissors</button>
+    </div>
+    <br>
+  </div>
 
-  <canvas id="myCanvas" width="700" height="500"></canvas>
+
+
  
      
 
@@ -136,36 +151,13 @@
   </footer>
   <!--Footer-->
     <!-- MDB -->
+    <script>
+      
+    </script>
+
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="app.js" charset="utf-8"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/script.js"></script>
-
-    <script>
-      var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-var x = canvas.width/2;
-var y = canvas.height-30;
-var dx = 2;
-var dy = -2;
-
-function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-}
-
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
-}
-
-setInterval(draw, 10);
-
-
-    </script>
 </body>
 </html>
